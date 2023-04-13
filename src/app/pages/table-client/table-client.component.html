@@ -1,0 +1,33 @@
+<div class=client-table>
+  <div class="d-flex justify-content-between">
+  <table class="table table-striped table-hover">
+    <caption>Lista de Clientes</caption>
+    <thead>
+    <tr>
+      <th scope="col">CPF</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Rua</th>
+      <th scope="col">Número</th>
+      <th scope="col">CEP</th>
+      <th scope="col">Rendimento Mensal</th>
+      <th scope="col">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <th scope="row">{{client.cpf | cpf }}</th>
+      <td>{{client.nome}}</td>
+      <td>{{client.telefone | telephone }}</td>
+      <td>{{client.rua}}</td>
+      <td>{{client.numero}}</td>
+      <td>{{client.cep}}</td>
+      <td>{{client.rendimentoMensal | currency: 'BRL'}}</td>
+      <td>
+        <button class="btn btn-dark btn-sm" routerLink="/clientes/cadastro/{{client.cpf}}" type="button">Atualizar</button>
+        <button (click)="deleteClient(client.cpf)" class="btn btn-danger btn-sm ms-1" type="button">Excluir</button>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

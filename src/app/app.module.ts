@@ -1,24 +1,72 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import {AppComponent} from './app.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {RouterLink, RouterLinkActive, RouterOutlet, RouterModule} from "@angular/router";
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {HomeComponent} from './pages/home/home.component';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import {TableClientsComponent} from './pages/table-client/table-client.component';
+import {HttpClientModule} from "@angular/common/http";
+import {CpfPipe} from './pipe/cpf/cpf.pipe';
+import {TelephonePipe} from './pipe/telephone/telephone.pipe';
+import {CreateUpdateClientComponent} from './pages/create-update-client/create-update-client.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import localePt from '@angular/common/locales/pt';
+import {NgOptimizedImage, registerLocaleData} from "@angular/common";
+import {NgxCurrencyModule} from "ngx-currency";
+import {FieldErrorComponent} from './components/field-error/field-error.component';
+import {FooterComponent} from './components/footer/footer.component';
 
+registerLocaleData(localePt, 'pt');
+export const customCurrencyMaskConfig = {
+  align: "left",
+  allowNegative: false,
+  allowZero: true,
+  decimal: ",",
+  precision: 2,
+  prefix: "R$ ",
+  suffix: "",
+  thousands: ".",
+  nullable: true,
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    HomeComponent,
+    TableClientsComponent,
+    CreateUpdateClientComponent,
+    CpfPipe,
+    TelephonePipe,
+    FieldErrorComponent,
     FooterComponent,
-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    RouterOutlet,
+    RouterLinkActive,
+    RouterLink,
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxCurrencyModule.forRoot(customCurrencyMaskConfig),
+    NgOptimizedImage
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt'
+    },
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL'
+    },],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
