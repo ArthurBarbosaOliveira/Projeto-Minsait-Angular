@@ -1,0 +1,30 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+footer a {
+  text-decoration: none;
+  color: #004118;
+}
+
+footer img {
+  width: 150px;
+  margin: 30px;
+  transition: transform 0.2s;
+}
+
+.linkedin-logo {
+  width: 200px;
+  height: 45px;
+}
+
+.github {
+  height: 50px;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
