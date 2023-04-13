@@ -5,8 +5,8 @@ import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-table-clients',
-  templateUrl: './table-clients.component.html',
-  styleUrls: ['./table-clients.component.css']
+  templateUrl: './table-client.component.html',
+  styleUrls: ['./table-client.component.css']
 })
 export class TableClientsComponent {
   clients: IClient[] = [];
