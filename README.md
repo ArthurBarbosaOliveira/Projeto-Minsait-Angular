@@ -1,28 +1,56 @@
-# ProjetoMinsaitAngular
+# :bank: Boas vindas ao meu repositório do Projeto-Minsait-Angular!! :rocket:
+ <summary>
+    <strong>👨‍💻 O que deverá ser desenvolvido</strong>
+ </summary><br>
 
-r CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Projeto para criaçãor de clientes, visualização e empréstimos.<br>
 
-## Development server
+ <summary>
+    <strong>👷 Estruturação do projeto</strong>
+ </summary><br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Cadastro de clientes
+- Edição de clientes
+- Exclusão de clientes
 
-## Code scaffolding
+Este projeto foi desenvolvido para utilizar como backend o 
+[Projeto-Minsait-Java](https://github.com/ArthurBarbosaOliveira/Projeto-Minsait-Java) 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# :bar_chart: Tecnologias Utilizadas
 
-## Running unit tests
+- [Angular](https://angular.io/) - Framework para desenvolvimento de aplicações web
+- [Typescript](https://www.typescriptlang.org/) - Superset do Javascript
+- [Bootstrap](https://getbootstrap.com/) - Framework para desenvolvimento de aplicações web
+- [Ngx-currency](https://www.npmjs.com/package/ngx-currency) - Biblioteca para formatação de moeda
+- [Sweetalert2](https://sweetalert2.github.io/) - Biblioteca para criação de alertas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<summary>
+    <strong> ⚠️ Configurações mínimas para execução do projeto</strong>
+</summary><br />
 
-## Running end-to-end tests
+Execute `npm install` para instalar as dependências do projeto.
 
-Run `ng e2efefeefebilities.
+ 1. Servidor de desenvolvimento
 
-## Further help
+Execute `ng serve` para um servidor de desenvolvimento. Navegue para `http://localhost:4200/`. A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos de origem.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-fefefefefefe
+2. Gerando código
+
+Execute `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+3. Build
+
+Execute `ng build` para construir o projeto. Os artefatos de construção serão armazenados no diretório `dist/`.
+
+ <summary>
+    <strong>👨‍💻 Informações de contato</strong>
+ </summary><br>
+
+
+- Seja bem vindo para tirar alguma dúvida, fazer alguma sugestão ou crítica, ou até mesmo bater um papo sobre, segue meus contatos.
+
+
+[E-mail](mailto:arthurbarbosa93@gmail.com)    [LinkedIn](https://www.linkedin.com/in/arthurbarbosaoliveira/)
+
