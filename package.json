@@ -22,7 +22,7 @@
     "@popperjs/core": "^2.11.7",
     "ngx-currency": "^3.0.0",
     "rxjs": "~7.8.0",
-    "sweetalert2": "^11.7.3",
+    "sweetalert2": "^11.0.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

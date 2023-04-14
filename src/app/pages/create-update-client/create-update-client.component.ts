@@ -3,7 +3,7 @@ import {ClientService} from "../../services/client.service";
 import {ActivatedRoute} from "@angular/router";
 import {IClient} from "../../interface/cliente";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-update-client',
@@ -42,16 +42,18 @@ export class CreateUpdateClientComponent {
     }
   }
 
-  onSubmit():void {
+  onSubmit(): void {
     this.validateAllFormFields(this.clientForm);
     if (this.clientForm.valid) {
       if (this.clientCPF) {
         this.updateClient();
       } else {
+        console.log("Form values:", this.clientForm.value);
         this.createClient();
       }
     }
   }
+  
 
   createClient():void {
     const client: IClient = this.fromForm(this.clientForm.value);
@@ -72,16 +74,6 @@ export class CreateUpdateClientComponent {
         this.connectionError();
         return;
       }
-
-      let errorsMessage: string = this.concatenateErrors(error.error.errors);
-      Swal.fire(
-        {
-          title: 'Erro ao criar cliente',
-          text: errorsMessage,
-          icon: 'error',
-          confirmButtonText: 'Ok'
-        }
-      )
     });
   }
 
@@ -105,15 +97,7 @@ export class CreateUpdateClientComponent {
         return;
       }
 
-      let errorsMessage: string = this.concatenateErrors(error.error.errors);
-      Swal.fire(
-        {
-          title: 'Erro ao atualizar cliente',
-          text: errorsMessage,
-          icon: 'error',
-          confirmButtonText: 'Ok'
-        }
-      )
+      let errorsMessage: string = this.concatenateErrors(error.error.errors);  
     });
   }
 
@@ -151,7 +135,7 @@ export class CreateUpdateClientComponent {
           inputStreet: client.rua,
           inputNumber: client.numero,
           inputZip: client.cep,
-          inputIncome: client.rendimentoMensal
+          inputIncome: client.rendaMensal
         })
       });
     }
@@ -165,17 +149,19 @@ export class CreateUpdateClientComponent {
       rua: form.inputStreet,
       numero: form.inputNumber,
       cep: form.inputZip,
-      rendimentoMensal: form.inputIncome
+      rendaMensal: form.inputIncome
     };
   }
 
   private concatenateErrors(errors: string[]): string {
     let str: string = "";
     for (const value of errors) {
+      console.log(value); 
       str += value + ' ';
     }
     return str;
   }
+  
 
   private connectionError(): void {
     Swal.fire(

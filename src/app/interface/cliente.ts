@@ -5,5 +5,5 @@ export interface IClient {
   rua: string;
   numero: number;
   cep: string;
-  rendimentoMensal: number;
+  rendaMensal: number;
 }
