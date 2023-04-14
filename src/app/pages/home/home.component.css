@@ -1,0 +1,17 @@
+.home-container {
+    height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .home-container div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  
