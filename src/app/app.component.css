@@ -5,3 +5,14 @@ main {
 .footer {
   margin-top: 50px;
 }
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+body {
+  overflow-y: hidden;
+}
+
